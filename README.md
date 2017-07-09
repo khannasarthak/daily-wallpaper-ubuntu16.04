@@ -5,7 +5,8 @@ A script that changes your wallpaper to the bing image of the day.
 * Add a scheduler to make the script run automatically and not block the processor while its waiting (no sleep(time))
 * Make it run as a script on startup.
 
-**Usage:**Download the script ```onetimechange.py``` and execute it from the correct directory. Your wallpaper will be changed and the image downloaded as a jpg.
+**Usage:**
+Download the script ```onetimechange.py``` and execute it from the correct directory. Your wallpaper will be changed and the image downloaded as a jpg.
 
 ```
 python3 onetimechange.py
