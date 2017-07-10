@@ -15,14 +15,14 @@ def main():
 	print ('----------------------------------------')
 	print ('-------DAILY WALLPAPER SWITCHER---------')
 	print ('----------------------------------------','\n')
-	print ('You can change the resolution ( default : 1920x1080) and region ( default: ru-RU) by editing the dload.py file','\n')
+	print ('You can change the resolution ( default : 1920x1080) and region ( default: ru-RU) by editing the onetimechange.py file','\n')
 
 
 	### CHANGE THESE IF NEEDED ###
 
 	# Possible regions : en-US, zh-CN, ja-JP, en-AU, en-UK, de-DE, en-NZ, ru-RU
 	resu = '1920x1080'
-	region = 'en-US'
+	region = 'ru-RU'
 
 	##############################
 
@@ -40,6 +40,7 @@ def main():
 	namek = (str(todayDate)+'_'+region+ext)
 	name = namek.replace('/','_')
 	path = direc+name
+
 	if os.path.isfile(path):
 		print ("Today's image has already been downloaded.")
 	else:
