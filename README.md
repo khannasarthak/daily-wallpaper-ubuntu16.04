@@ -34,5 +34,9 @@ The format of the image names is ```mm_dd__YYYY_region.jpg```
 * Python 3
 * Tested for Ubuntu 16.04 but should work with 14.04 as well.
 
+** Errors/Troubleshooting:**
 
+* The background doesn't change on my virtual machine running 16.04.2 the following is the error. Haven't been unable to solve the problem.
+
+```Using the 'memory' GSettings backend.  Your settings will not be saved or shared with other applications.```
 
