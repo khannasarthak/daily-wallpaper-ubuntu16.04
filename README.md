@@ -1,10 +1,10 @@
 # daily-wallpaper-ubuntu16.04
-A script that changes your wallpaper to the bing image of the day. 
+A script that changes your wallpaper to the bing image of the day. everyday. 
 
 **To-Do:**
 * Add a scheduler to make the script run automatically and not block the processor while its waiting (no sleep(time))
 	**USE CRON INSTEAD**
-* Make it run as a script on startup.
+* ~~Make it run as a script on startup.~~
 * Add a check for whether internet is connected or not.
 
 **Usage:**
@@ -16,13 +16,21 @@ A script that changes your wallpaper to the bing image of the day.
 	python3 onetimechange.py
 	```
 
-* To create a recurring job, can use crontab to schedule when you want the script to execute:
+* Running at startup:
 	
-	* Open terminal -  ```crontab -e```
+	1. Locate the file ```onetimechange.py``` and change its permissions using ```chmod +x onetimechange.py``` from the terminal
 
-	* Choose your preferred editor (nano) move to the end and add the following line - ```10 9 * * * python3 /home/user/Desktop/onetimechange.py```  change the time based on your needs, this executes every day at 9:10 AM [*refer wiki article on cron*](https://en.wikipedia.org/wiki/Cron) 
+	2. Find the exact location of the python script, once in the folder containing the script type ```pwd``` and copy the result, it should be something like ```/home/<Your Username>/Desktop``` if your file is directly on the desktop.
 
-	* To save press ```CTRL+X``` and then ```Y``` to save the crontab file.
+	3. Add the file name to the end of the pwd output: ```/home/<Your Username>/Desktop/onetimechange.py```
+
+	4. Search ```Startup Applications``` 
+
+	5. Select Add and give a suitable name.
+
+	6. In the section named ```Command``` write ```python3 /home/<Your Username>/Desktop/onetimechange.py``` , Change it according to your actual path. 
+
+	7. Now on every start up, your wallpaper will be set as the wallpaper of the day.
 
 
 * To change your region, edit the marked areas in the script ```onetimechange.py```.
