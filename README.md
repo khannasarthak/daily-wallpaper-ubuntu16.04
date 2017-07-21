@@ -3,27 +3,39 @@ A script that changes your wallpaper to the bing image of the day.
 
 **To-Do:**
 * Add a scheduler to make the script run automatically and not block the processor while its waiting (no sleep(time))
+	**USE CRON INSTEAD**
 * Make it run as a script on startup.
 * Add a check for whether internet is connected or not.
 
 **Usage:**
-Download the script ```onetimechange.py``` and execute it from the correct directory. Your wallpaper will be changed and the image downloaded as a jpg.
+* One time use:
 
-```
-python3 onetimechange.py
-```
+	Download the script ```onetimechange.py``` and execute it from the correct directory. Your wallpaper will be changed and the image downloaded as a jpg.
 
-To change your region, edit the marked areas in the script ```onetimechange.py```.
+	```
+	python3 onetimechange.py
+	```
 
-```python
-### CHANGE THESE IF NEEDED ###
+* To create a recurring job, can use crontab to schedule when you want the script to execute:
+	
+	* Open terminal -  ```crontab -e```
 
-# Possible regions : en-US, zh-CN, ja-JP, en-AU, en-UK, de-DE, en-NZ, ru-RU
-resu = '1920x1080'
-region = 'en-US'
+	* Choose your preferred editor (nano) move to the end and add the following line - ```10 9 * * * python3 /home/user/Desktop/onetimechange.py```  change the time based on your needs, this executes every day at 9:10 AM [*refer wiki article on cron*](https://en.wikipedia.org/wiki/Cron) 
 
-##############################
-```
+	* To save press ```CTRL+X``` and then ```Y``` to save the crontab file.
+
+
+* To change your region, edit the marked areas in the script ```onetimechange.py```.
+
+	```python
+	### CHANGE THESE IF NEEDED ###
+
+	# Possible regions : en-US, zh-CN, ja-JP, en-AU, en-UK, de-DE, en-NZ, ru-RU
+	resu = '1920x1080'
+	region = 'en-US'
+
+	##############################
+	```
 
 The images are downloaded and stored at ```~/Pictures/Daily Bing Wallpapers/``` .
 
